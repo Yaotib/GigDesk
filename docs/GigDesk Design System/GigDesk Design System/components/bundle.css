@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap");
+
+body { margin: 0; font-family: var(--font-sans, "Geist", system-ui, sans-serif); font-size: 14px; line-height: 20px; background: var(--canvas); color: var(--ink); -webkit-font-smoothing: antialiased; }
+.gd-pad { padding: var(--space-4); }
+.gd-row { display: flex; gap: var(--space-2); align-items: center; flex-wrap: wrap; }
+.gd-stack { display: flex; flex-direction: column; gap: var(--space-3); }
+.gd-mono { font-family: "Geist Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+.gd-label { font-size: 12px; line-height: 16px; font-weight: 500; color: var(--ink-muted); }
+.gd-muted { color: var(--ink-muted); }
+.gd-icon { width: 16px; height: 16px; stroke-width: 1.75; flex: none; }
+.gd-icon-md { width: 20px; height: 20px; stroke-width: 1.75; flex: none; }
+
+/* Button */
+.gd-btn { display: inline-flex; align-items: center; gap: var(--space-2); height: 36px; padding: 0 var(--space-4); font: inherit; font-weight: 500; border-radius: var(--radius-md); border: 1px solid var(--line-control); background: var(--surface); color: var(--ink); cursor: pointer; }
+.gd-btn:hover { background: var(--surface-sunken); }
+.gd-btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.gd-btn-primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.gd-btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+.gd-btn-ghost { border-color: transparent; background: transparent; }
+.gd-btn-danger { color: var(--danger); }
+.gd-btn[disabled] { background: var(--surface-sunken); border-color: var(--line); color: var(--ink-subtle); cursor: not-allowed; }
+.gd-btn-lg { height: 44px; }
+
+/* Chips & provenance */
+.gd-chip { display: inline-flex; align-items: center; gap: var(--space-1); height: 22px; padding: 0 6px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 500; line-height: 16px; white-space: nowrap; }
+.gd-chip .gd-icon { width: 14px; height: 14px; }
+.gd-chip-ai { background: var(--surface-sunken); color: var(--ink-muted); }
+.gd-chip-check { background: var(--warning-soft); color: var(--warning); }
+.gd-chip-missing { background: var(--danger-soft); color: var(--danger); }
+.gd-chip-ok { background: var(--success-soft); color: var(--success); }
+.gd-chip-rule { background: var(--surface-sunken); color: var(--ink); font-family: "Geist Mono", monospace; }
+.gd-chip-manual { background: transparent; color: var(--ink-muted); box-shadow: inset 0 0 0 1px var(--line-control); }
+.gd-chip-sample { background: var(--warning-soft); color: var(--warning); letter-spacing: .02em; }
+.gd-ai-value { border-bottom: 1px dotted var(--line-control); }
+
+/* Extracted field */
+.gd-fields { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); }
+.gd-field { display: grid; grid-template-columns: 140px 1fr auto; gap: var(--space-3); align-items: start; padding: var(--space-3) var(--space-4); border-top: 1px solid var(--line); }
+.gd-field:first-child { border-top: 0; }
+.gd-field-value { font-weight: 500; }
+.gd-field-empty { color: var(--ink-subtle); font-weight: 400; }
+.gd-snippet { margin-top: var(--space-1); font-size: 13px; line-height: 18px; color: var(--ink-muted); background: var(--surface-sunken); border-radius: var(--radius-sm); padding: 2px 6px; display: inline-block; }
+.gd-snippet mark { background: var(--accent-soft); color: var(--ink); padding: 0 2px; }
+
+/* Workflow steps */
+.gd-steps { display: flex; gap: 0; border-bottom: 1px solid var(--line); }
+.gd-step { display: flex; align-items: center; gap: var(--space-2); padding: var(--space-3) var(--space-4) var(--space-3) 0; margin-right: var(--space-4); color: var(--ink-muted); border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.gd-step-num { font-family: "Geist Mono", monospace; font-size: 12px; font-weight: 500; }
+.gd-step.is-done { color: var(--ink); }
+.gd-step.is-done .gd-step-num { color: var(--success); }
+.gd-step.is-current { color: var(--ink); font-weight: 500; border-bottom-color: var(--accent); }
+
+/* Lineup comparison */
+.gd-lineups { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; }
+.gd-lineup { padding: var(--space-4); border-left: 1px solid var(--line); position: relative; }
+.gd-lineup:first-child { border-left: 0; }
+.gd-lineup.is-recommended { box-shadow: inset 0 3px 0 var(--accent); }
+.gd-lineup.is-selected { background: var(--accent-soft); }
+.gd-lineup h4 { margin: 0; font-size: 16px; line-height: 24px; font-weight: 600; }
+.gd-lineup dl { margin: var(--space-3) 0 0; display: grid; grid-template-columns: 1fr auto; gap: 6px var(--space-2); font-size: 13px; line-height: 18px; }
+.gd-lineup dt { color: var(--ink-muted); }
+.gd-lineup dd { margin: 0; text-align: right; }
+.gd-rec { font-size: 12px; font-weight: 500; color: var(--accent-ink); display: inline-flex; gap: 4px; align-items: center; }
+.gd-total-sm { font-family: "Geist Mono", monospace; font-size: 18px; line-height: 24px; font-weight: 500; margin-top: var(--space-2); }
+
+/* Quote */
+.gd-quote { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); }
+.gd-quote table { width: 100%; border-collapse: collapse; }
+.gd-quote th { text-align: left; font-size: 12px; font-weight: 500; color: var(--ink-muted); padding: var(--space-2) var(--space-4); background: var(--surface-sunken); border-bottom: 1px solid var(--line); }
+.gd-quote td { padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--line); vertical-align: top; }
+.gd-num { text-align: right !important; font-family: "Geist Mono", monospace; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.gd-trace { display: block; margin-top: 2px; font-family: "Geist Mono", monospace; font-size: 12px; color: var(--ink-muted); }
+.gd-sum { padding: var(--space-3) var(--space-4) var(--space-4); display: grid; grid-template-columns: 1fr auto; gap: 6px var(--space-6); justify-content: end; }
+.gd-sum .gd-num { min-width: 140px; }
+.gd-sum-total { border-top: 1px solid var(--ink); padding-top: var(--space-2); font-weight: 600; }
+.gd-sum-total.gd-num { font-size: 24px; line-height: 32px; font-weight: 500; }
+.gd-due { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
+.gd-due > div { padding: var(--space-3) var(--space-4); }
+.gd-due > div + div { border-left: 1px solid var(--line); }
+.gd-due-amt { font-family: "Geist Mono", monospace; font-size: 18px; line-height: 24px; font-weight: 500; }
+
+/* Approval bar */
+.gd-approve { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding: var(--space-3) var(--space-4); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); }
+.gd-approve-lock { display: flex; align-items: center; gap: var(--space-2); color: var(--ink-muted); font-size: 13px; }
+
+/* Shell */
+.gd-shell { display: grid; grid-template-columns: 232px 1fr; height: 100%; min-height: 320px; }
+.gd-side { background: var(--sidebar); color: var(--sidebar-ink); padding: var(--space-4) var(--space-3); display: flex; flex-direction: column; gap: var(--space-1); }
+.gd-brand { display: flex; align-items: center; gap: var(--space-2); font-weight: 600; padding: 0 var(--space-2) var(--space-4); }
+.gd-brand-mark { width: 24px; height: 24px; border-radius: var(--radius-sm); background: var(--accent); color: var(--on-accent); display: grid; place-items: center; }
+.gd-nav-label { font-size: 12px; color: var(--sidebar-muted); padding: var(--space-3) var(--space-2) var(--space-1); }
+.gd-nav { display: flex; align-items: center; gap: var(--space-2); height: 36px; padding: 0 var(--space-2); border-radius: var(--radius-md); color: var(--sidebar-ink); text-decoration: none; position: relative; }
+.gd-nav:hover { background: var(--sidebar-raised); }
+.gd-nav.is-active { background: var(--sidebar-raised); }
+.gd-nav.is-active::before { content: ""; position: absolute; left: -12px; top: 8px; bottom: 8px; width: 3px; border-radius: 0 2px 2px 0; background: var(--accent); }
+.gd-nav-count { margin-left: auto; font-family: "Geist Mono", monospace; font-size: 12px; color: var(--sidebar-muted); }
+.gd-main { padding: var(--space-6); }
+.gd-head { display: flex; align-items: center; justify-content: space-between; }
+.gd-head h1 { margin: 0; font-size: 24px; line-height: 32px; font-weight: 600; }

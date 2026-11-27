@@ -1,0 +1,56 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>GigDesk</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--canvas); color:var(--ink); font-family:"Geist", system-ui, sans-serif; overflow:hidden; }
+  .cover { position:relative; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .deep { fill:var(--sidebar); }
+  .lime { fill:var(--accent); }
+  .tint { fill:var(--surface-sunken); }
+  .ok { fill:var(--success); }
+  .blk { rx:var(--radius-lg); }
+  .tag { rx:var(--radius-sm); }
+  .dot { fill:var(--accent); }
+  .words { position:absolute; left:24px; bottom:24px; max-width:440px; }
+  .name { margin:0; font-size:104px; line-height:.92; font-weight:600; letter-spacing:-.03em; color:var(--ink); }
+  .tagline { margin:12px 0 0 4px; font-size:14px; line-height:20px; color:var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      sidebar 200×264 bled off the top (the dark desk) · accent 120×200 (the one primary action) · surface-sunken 136×152 bleeding off the right · success 56×16 once (approved) — about 40% of 960×288
+  arrangement one tall dark slab with satellites, bottoms on one line space-6 above the edge, space-4 gutters
+  pattern     dot grid, from "precise financial tool ... quietly musical": a stage-plot grid of accent dots at a space-6 pitch on the slab, 6×7
+  scales      gutters space-4; pitch space-6; corners radius-lg, tag radius-sm
+-->
+<rect class="deep blk" x="16" y="-16" width="200" height="280" rx="10"/>
+<rect class="lime blk" x="232" y="64" width="120" height="200" rx="10"/>
+<rect class="tint blk" x="368" y="112" width="136" height="152" rx="10"/>
+<rect class="ok tag" x="368" y="88" width="56" height="16" rx="4"/>
+<g>
+<circle class="dot" cx="56" cy="48" r="2"/><circle class="dot" cx="80" cy="48" r="2"/><circle class="dot" cx="104" cy="48" r="2"/><circle class="dot" cx="128" cy="48" r="2"/><circle class="dot" cx="152" cy="48" r="2"/><circle class="dot" cx="176" cy="48" r="2"/>
+<circle class="dot" cx="56" cy="72" r="2"/><circle class="dot" cx="80" cy="72" r="2"/><circle class="dot" cx="104" cy="72" r="2"/><circle class="dot" cx="128" cy="72" r="2"/><circle class="dot" cx="152" cy="72" r="2"/><circle class="dot" cx="176" cy="72" r="2"/>
+<circle class="dot" cx="56" cy="96" r="2"/><circle class="dot" cx="80" cy="96" r="2"/><circle class="dot" cx="104" cy="96" r="2"/><circle class="dot" cx="128" cy="96" r="2"/><circle class="dot" cx="152" cy="96" r="2"/><circle class="dot" cx="176" cy="96" r="2"/>
+<circle class="dot" cx="56" cy="120" r="2"/><circle class="dot" cx="80" cy="120" r="2"/><circle class="dot" cx="104" cy="120" r="2"/><circle class="dot" cx="128" cy="120" r="2"/><circle class="dot" cx="152" cy="120" r="2"/><circle class="dot" cx="176" cy="120" r="2"/>
+<circle class="dot" cx="56" cy="144" r="2"/><circle class="dot" cx="80" cy="144" r="2"/><circle class="dot" cx="104" cy="144" r="2"/><circle class="dot" cx="128" cy="144" r="2"/><circle class="dot" cx="152" cy="144" r="2"/><circle class="dot" cx="176" cy="144" r="2"/>
+<circle class="dot" cx="56" cy="168" r="2"/><circle class="dot" cx="80" cy="168" r="2"/><circle class="dot" cx="104" cy="168" r="2"/><circle class="dot" cx="128" cy="168" r="2"/><circle class="dot" cx="152" cy="168" r="2"/><circle class="dot" cx="176" cy="168" r="2"/>
+<circle class="dot" cx="56" cy="192" r="2"/><circle class="dot" cx="80" cy="192" r="2"/><circle class="dot" cx="104" cy="192" r="2"/><circle class="dot" cx="128" cy="192" r="2"/><circle class="dot" cx="152" cy="192" r="2"/><circle class="dot" cx="176" cy="192" r="2"/>
+</g>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">GigDesk</h1>
+<p class="tagline">From WhatsApp enquiry to approved quote and stage rider.</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+{
+  "manifestVersion": 3,
+  "name": "GigDesk Design System",
+  "namespace": "GigDesk",
+  "files": [
+    "components/AppShell/README.md",
+    "components/ApprovalBar/README.md",
+    "components/Button/README.md",
+    "components/ExtractedField/README.md",
+    "components/LineupComparison/README.md",
+    "components/ProvenanceChip/README.md",
+    "components/QuoteSummary/README.md",
+    "components/WorkflowSteps/README.md",
+    "components/bundle.css",
+    "tokens.css"
+  ],
+  "libraries": [],
+  "components": [
+    {
+      "name": "AppShell",
+      "group": "Navigation",
+      "summary": "A dark sidebar (sidebar, 232px) on a canvas page."
+    },
+    {
+      "name": "ApprovalBar",
+      "group": "Workflow",
+      "summary": "A sticky footer on the review screen."
+    },
+    {
+      "name": "Button",
+      "group": "Actions",
+      "summary": "Buttons start with a verb and use sentence case."
+    },
+    {
+      "name": "ExtractedField",
+      "group": "Forms",
+      "summary": "One row of the brief analysis: the label, the value, the original source snippet with the matched words highlighted in accent-soft, and a provenance chip."
+    },
+    {
+      "name": "LineupComparison",
+      "group": "Workflow",
+      "summary": "Three columns (2-piece, 4-piece, 11-piece) with identical rows so they compare at a glance: estimated total, budget fit, stage, power, setup plus soundcheck, e…"
+    },
+    {
+      "name": "ProvenanceChip",
+      "group": "Status",
+      "summary": "A provenance chip states where a value came from: AI-read, Check (uncertain), Missing, Confirmed, a rule ID (calculated), Manual, or SAMPLE DATA."
+    },
+    {
+      "name": "QuoteSummary",
+      "group": "Finance",
+      "summary": "The itemised financial table."
+    },
+    {
+      "name": "WorkflowSteps",
+      "group": "Navigation",
+      "summary": "The set-list strip on every enquiry screen: 01 Brief, 02 Lineup, 03 Price, 04 Review & export."
+    }
+  ],
+  "assetGroups": []
+}

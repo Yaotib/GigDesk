@@ -1,0 +1,126 @@
+/* GigDesk Design System — generated from tokens.json */
+:root, [data-theme="light"] {
+  --canvas: #f8f8f5; /* App background behind every page. Warm off-white, never pure white. */
+  --surface: #ffffff; /* Tables, forms, document previews and panels that sit on canvas. */
+  --surface-sunken: #f1f2ee; /* Source-snippet wells, table header rows, read-only inputs. */
+  --line: #e7e9e4; /* Dividers and panel edges. Decorative only: never the only edge of a control. */
+  --line-control: #858b85; /* Borders of inputs, selects and checkboxes (3.5:1 on surface). */
+  --ink: #191d1b; /* Primary text and figures on canvas, surface and accent (16:1). */
+  --ink-muted: #636963; /* Secondary text, labels and helper copy on canvas, surface and surface-sunken (5.0:1 or better). */
+  --ink-subtle: #777d78; /* Brief's original secondary grey. 4:1 on canvas: placeholders and 24px+ text only, never body copy. */
+  --sidebar: #171a19; /* Sidebar and mobile top bar ground. */
+  --sidebar-raised: #232826; /* Hovered and active nav rows inside the sidebar. */
+  --sidebar-ink: #e9ece6; /* Nav labels and headings on sidebar (14.7:1). */
+  --sidebar-muted: #8e958f; /* Nav section labels and counts on sidebar (5.7:1). */
+  --accent: #c7f464; /* Lime. Primary action fill, active-nav marker, recommended rule. A FILL, never text on light grounds (1.2:1). */
+  --accent-hover: #b6e84a; /* Hover and pressed fill of primary buttons. */
+  --on-accent: #191d1b; /* Text and icons on accent fills (13.4:1). */
+  --accent-soft: #eef9d2; /* Selected table rows and the chosen lineup column background. */
+  --accent-ink: #3f6212; /* Text that must read as 'accent' on light grounds, e.g. 'Recommended' label (7:1 on surface). */
+  --success: #276b43; /* Confirmed-by-team, Approved, Paid. Text and icons on surface and success-soft (5.6:1). */
+  --success-soft: #e6f2ea; /* Ground of success chips and banners. */
+  --warning: #8f5b00; /* Uncertain fields, over-budget notes, quote nearing expiry. Text on warning-soft (5.1:1). */
+  --warning-soft: #fbf0d9; /* Ground of warning chips and banners. */
+  --danger: #b42318; /* Missing required fields, errors, destructive actions. Text on danger-soft (5.6:1). */
+  --danger-soft: #fce9e7; /* Ground of missing/error chips and banners. */
+  --focus: #191d1b; /* 2px keyboard focus ring with a 2px canvas gap. Lime is too light to be a ring. */
+  --shadow-doc: 0 1px 2px rgba(25,29,27,0.06), 0 8px 24px rgba(25,29,27,0.06); /* A4 document previews only: the one thing that sits 'on' the desk. */
+  --shadow-overlay: 0 12px 32px rgba(25,29,27,0.16); /* Menus, popovers, dialogs. */
+}
+:root {
+  --space-1: 4px; /* Icon-to-label gap, chip padding. */
+  --space-2: 8px; /* Gap inside compact rows and button groups. */
+  --space-3: 12px; /* Table cell padding, field label to input. */
+  --space-4: 16px; /* Panel padding on mobile, gap between fields. */
+  --space-6: 24px; /* Panel padding on desktop, gap between field groups. */
+  --space-8: 32px; /* Gap between page sections. */
+  --space-12: 48px; /* Page top padding on desktop. */
+  --radius-sm: 4px; /* Chips, checkboxes, rule-trace tags. */
+  --radius-md: 6px; /* Buttons, inputs, menus. */
+  --radius-lg: 10px; /* Panels and document previews. The largest radius in the product. */
+  --control-sm: 32px; /* Dense table actions on desktop. */
+  --control-md: 36px; /* Default button and input height on desktop. */
+  --control-lg: 44px; /* All controls on mobile; primary page actions. */
+  --icon-sm: 16px; /* Lucide icons in chips, tables and buttons (stroke 1.75). */
+  --icon-md: 20px; /* Lucide icons in nav and page headers (stroke 1.75). */
+  --sidebar-width: 232px; /* Desktop sidebar. */
+  --content-max: 1200px; /* Max width of page content. */
+  --bp-sm: 640px; /* Breakpoint: large phones. */
+  --bp-md: 768px; /* Breakpoint: tablets; sidebar collapses below this. */
+  --bp-lg: 1024px; /* Breakpoint: laptop; lineup columns go side by side. */
+  --bp-xl: 1280px; /* Breakpoint: desktop; quote and document preview side by side. */
+  --font-sans: "Geist", "Inter", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", monospace;
+  --text-page-title: 600 24px/32px var(--font-sans);
+  --text-section-title: 600 16px/24px var(--font-sans);
+  --text-body: 400 14px/20px var(--font-sans);
+  --text-body-strong: 500 14px/20px var(--font-sans);
+  --text-small: 400 13px/18px var(--font-sans);
+  --text-label: 500 12px/16px var(--font-sans);
+  --text-figure: 400 14px/20px var(--font-mono);
+  --text-figure-total: 500 24px/32px var(--font-mono);
+  --text-step-number: 500 12px/16px var(--font-mono);
+}
+.page-title {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.section-title {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.body-strong {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.small {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.figure {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.figure-total {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.step-number {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+}

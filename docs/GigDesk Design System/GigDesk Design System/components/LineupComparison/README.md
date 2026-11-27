@@ -1,0 +1,3 @@
+# Lineup comparison
+
+Three columns (2-piece, 4-piece, 11-piece) with identical rows so they compare at a glance: estimated total, budget fit, stage, power, setup plus soundcheck, event fit and trade-offs. The **recommendation** is a 3px lime top rule plus an `accent-ink` 'Recommended' label with `Sparkles`, because it is AI advice. The team's **selection** is a separate state: an `accent-soft` background and a checked radio. Keep the two visually distinct, because the team can select a lineup that wasn't recommended. Below 1024px, the columns become a horizontal snap list with the recommended one first.

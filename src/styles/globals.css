@@ -1,0 +1,91 @@
+@import "tailwindcss";
+/* Verbatim copy of the design system's tokens.css (kept in sync by tests/tokens.test.ts). */
+@import "./tokens.css" layer(base);
+
+/*
+ * Tailwind theme = design tokens only. Default palettes, radii and shadows are removed
+ * so that only token classes exist (bg-canvas, text-ink, rounded-md, shadow-doc …).
+ */
+@theme inline {
+  --color-*: initial;
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-line: var(--line);
+  --color-line-control: var(--line-control);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-subtle: var(--ink-subtle);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-raised: var(--sidebar-raised);
+  --color-sidebar-ink: var(--sidebar-ink);
+  --color-sidebar-muted: var(--sidebar-muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-on-accent: var(--on-accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-ink);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-focus: var(--focus);
+}
+
+@theme {
+  --radius-*: initial;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  --shadow-*: initial;
+  --shadow-doc: 0 1px 2px rgba(25, 29, 27, 0.06), 0 8px 24px rgba(25, 29, 27, 0.06);
+  --shadow-overlay: 0 12px 32px rgba(25, 29, 27, 0.16);
+
+  /* Geist has no ₵ (U+20B5) glyph: Inter (latin-ext subset only) supplies it per glyph. */
+  --font-sans: var(--font-geist-sans), var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), var(--font-inter), ui-monospace, "SFMono-Regular", monospace;
+
+  --spacing-sidebar: 232px;
+  --container-content: 1200px;
+}
+
+@layer base {
+  :root {
+    /* Point the token font families at the next/font-loaded faces. */
+    --font-sans: var(--font-geist-sans), var(--font-inter), system-ui, sans-serif;
+    --font-mono: var(--font-geist-mono), var(--font-inter), ui-monospace, "SFMono-Regular", monospace;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--canvas);
+    color: var(--ink);
+    font: var(--text-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Figures are always tabular. */
+  .figure,
+  .figure-total,
+  .step-number {
+    font-variant-numeric: tabular-nums;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  /* Lucide icons: stroke 1.75 everywhere, colour inherited. */
+  .lucide {
+    stroke-width: 1.75;
+    flex: none;
+  }
+}
